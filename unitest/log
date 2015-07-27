@@ -1,0 +1,323 @@
+mkdir -p ./bin
+g++ main.cc -I../../gtest/include -I../../NeuralNetwork -L../../gtest/lib -g -std=c++11 -lgtest -lgtest_main -o ./bin/test.out
+Undefined symbols for architecture x86_64:
+  "std::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> >::data() const", referenced from:
+      testing::internal::PrintWideStringTo(std::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> > const&, std::ostream*) in libgtest.a(gtest-all.o)
+  "std::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> >::find(std::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> > const&, unsigned long) const", referenced from:
+      bool testing::(anonymous namespace)::IsSubstringPred<std::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> > >(std::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> > const&, std::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> > const&) in libgtest.a(gtest-all.o)
+  "std::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> >::size() const", referenced from:
+      testing::internal::PrintWideStringTo(std::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> > const&, std::ostream*) in libgtest.a(gtest-all.o)
+  "std::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> >::c_str() const", referenced from:
+      testing::Message::operator<<(std::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> > const&) in libgtest.a(gtest-all.o)
+  "std::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> >::length() const", referenced from:
+      testing::Message::operator<<(std::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> > const&) in libgtest.a(gtest-all.o)
+  "std::string::end() const", referenced from:
+      testing::internal::XmlUnitTestResultPrinter::RemoveInvalidXmlCharacters(std::string const&) in libgtest.a(gtest-all.o)
+  "std::string::data() const", referenced from:
+      testing::internal::PrintStringTo(std::string const&, std::ostream*) in libgtest.a(gtest-all.o)
+  "std::string::find(std::string const&, unsigned long) const", referenced from:
+      bool testing::(anonymous namespace)::IsSubstringPred<std::string>(std::string const&, std::string const&) in libgtest.a(gtest-all.o)
+  "std::string::find(char, unsigned long) const", referenced from:
+      testing::internal::FormatDeathTestOutput(std::string const&) in libgtest.a(gtest-all.o)
+      testing::internal::SplitString(std::string const&, char, std::vector<std::string, std::allocator<std::string> >*) in libgtest.a(gtest-all.o)
+  "std::string::size() const", referenced from:
+      testing::internal::XmlUnitTestResultPrinter::EscapeXml(std::string const&, bool) in libgtest.a(gtest-all.o)
+      testing::internal::XmlUnitTestResultPrinter::RemoveInvalidXmlCharacters(std::string const&) in libgtest.a(gtest-all.o)
+      testing::internal::PrintStringTo(std::string const&, std::ostream*) in libgtest.a(gtest-all.o)
+      std::basic_string<char, std::char_traits<char>, std::allocator<char> > std::operator+<char, std::char_traits<char>, std::allocator<char> >(char const*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) in libgtest.a(gtest-all.o)
+  "std::string::begin() const", referenced from:
+      testing::internal::XmlUnitTestResultPrinter::RemoveInvalidXmlCharacters(std::string const&) in libgtest.a(gtest-all.o)
+  "std::string::c_str() const", referenced from:
+      testing::internal::BoolFromGTestEnv(char const*, bool) in libgtest.a(gtest-all.o)
+      testing::internal::StringFromGTestEnv(char const*, char const*) in libgtest.a(gtest-all.o)
+      testing::internal::Int32FromGTestEnv(char const*, int) in libgtest.a(gtest-all.o)
+      testing::UnitTest::AddTestPartResult(testing::TestPartResult::Type, char const*, int, std::string const&, std::string const&) in libgtest.a(gtest-all.o)
+      testing::internal::UnitTestOptions::GetOutputFormat() in libgtest.a(gtest-all.o)
+      testing::internal::UnitTestOptions::GetAbsolutePathToOutputFile() in libgtest.a(gtest-all.o)
+      testing::internal::FilePath::IsAbsolutePath() const in libgtest.a(gtest-all.o)
+      ...
+  "std::string::empty() const", referenced from:
+      testing::UnitTest::AddTestPartResult(testing::TestPartResult::Type, char const*, int, std::string const&, std::string const&) in libgtest.a(gtest-all.o)
+      testing::internal::AppendUserMessage(std::string const&, testing::Message const&) in libgtest.a(gtest-all.o)
+      testing::internal::FilePath::IsDirectory() const in libgtest.a(gtest-all.o)
+      testing::internal::UnitTestOptions::FilterMatchesTest(std::string const&, std::string const&) in libgtest.a(gtest-all.o)
+      testing::internal::XmlUnitTestResultPrinter::XmlUnitTestResultPrinter(char const*) in libgtest.a(gtest-all.o)
+      testing::internal::InDeathTestChild() in libgtest.a(gtest-all.o)
+      testing::TestPartResult::file_name() const in libgtest.a(gtest-all.o)
+      ...
+  "std::string::length() const", referenced from:
+      testing::internal::FilePath::IsDirectory() const in libgtest.a(gtest-all.o)
+      testing::internal::StringStreamToString(std::basic_stringstream<char, std::char_traits<char>, std::allocator<char> >*) in libgtest.a(gtest-all.o)
+      testing::internal::String::EndsWithCaseInsensitive(std::string const&, std::string const&) in libgtest.a(gtest-all.o)
+      testing::internal::FilePath::CreateDirectoriesRecursively() const in libgtest.a(gtest-all.o)
+      testing::UnitTest::Run() in libgtest.a(gtest-all.o)
+      testing::internal::ParseFlagValue(char const*, char const*, bool) in libgtest.a(gtest-all.o)
+      testing::internal::FilePath::RemoveExtension(char const*) const in libgtest.a(gtest-all.o)
+      ...
+  "std::string::substr(unsigned long, unsigned long) const", referenced from:
+      testing::internal::FormatDeathTestOutput(std::string const&) in libgtest.a(gtest-all.o)
+      testing::internal::SplitString(std::string const&, char, std::vector<std::string, std::allocator<std::string> >*) in libgtest.a(gtest-all.o)
+      testing::internal::FilePath::RemoveExtension(char const*) const in libgtest.a(gtest-all.o)
+      testing::internal::FilePath::RemoveTrailingPathSeparator() const in libgtest.a(gtest-all.o)
+  "std::string::compare(char const*) const", referenced from:
+      bool std::operator!=<char, std::char_traits<char>, std::allocator<char> >(std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, char const*) in libgtest.a(gtest-all.o)
+      bool std::operator==<char, std::char_traits<char>, std::allocator<char> >(std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, char const*) in libgtest.a(gtest-all.o)
+      bool std::operator==<char, std::char_traits<char>, std::allocator<char> >(char const*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) in libgtest.a(gtest-all.o)
+  "std::string::compare(std::string const&) const", referenced from:
+      bool std::operator<<char, std::char_traits<char>, std::allocator<char> >(std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) in libgtest.a(gtest-all.o)
+      bool std::operator==<char, std::char_traits<char>, std::allocator<char> >(std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) in libgtest.a(gtest-all.o)
+  "std::string::operator[](unsigned long) const", referenced from:
+      testing::internal::XmlUnitTestResultPrinter::EscapeXml(std::string const&, bool) in libgtest.a(gtest-all.o)
+      bool testing::internal::ParseNaturalNumber<int>(std::string const&, int*) in libgtest.a(gtest-all.o)
+  "std::basic_stringstream<char, std::char_traits<char>, std::allocator<char> >::str() const", referenced from:
+      testing::internal::StringStreamToString(std::basic_stringstream<char, std::char_traits<char>, std::allocator<char> >*) in libgtest.a(gtest-all.o)
+      testing::internal::String::FormatHexInt(int) in libgtest.a(gtest-all.o)
+      testing::internal::String::FormatIntWidth2(int) in libgtest.a(gtest-all.o)
+      testing::internal::String::FormatByte(unsigned char) in libgtest.a(gtest-all.o)
+      testing::internal::FormatTimeInMillisAsSeconds(long long) in libgtest.a(gtest-all.o)
+      std::string testing::PrintToString<char const*>(char const* const&) in libgtest.a(gtest-all.o)
+      std::string testing::PrintToString<wchar_t const*>(wchar_t const* const&) in libgtest.a(gtest-all.o)
+      ...
+  "std::allocator<char>::allocator()", referenced from:
+      testing::internal::UnitTestImpl::CurrentOsStackTraceExceptTop(int) in libgtest.a(gtest-all.o)
+      testing::internal::FilePath::RemoveDirectoryName() const in libgtest.a(gtest-all.o)
+      testing::internal::UnitTestOptions::GetOutputFormat() in libgtest.a(gtest-all.o)
+      testing::internal::UnitTestOptions::GetAbsolutePathToOutputFile() in libgtest.a(gtest-all.o)
+      testing::internal::UnitTestOptions::FilterMatchesTest(std::string const&, std::string const&) in libgtest.a(gtest-all.o)
+      testing::internal::HasOneFailure(char const*, char const*, char const*, testing::TestPartResultArray const&, testing::TestPartResult::Type, std::string const&) in libgtest.a(gtest-all.o)
+      testing::internal::String::ShowWideCString(wchar_t const*) in libgtest.a(gtest-all.o)
+      ...
+  "std::allocator<char>::~allocator()", referenced from:
+      testing::internal::UnitTestImpl::CurrentOsStackTraceExceptTop(int) in libgtest.a(gtest-all.o)
+      testing::internal::FilePath::RemoveDirectoryName() const in libgtest.a(gtest-all.o)
+      testing::internal::UnitTestOptions::GetOutputFormat() in libgtest.a(gtest-all.o)
+      testing::internal::UnitTestOptions::GetAbsolutePathToOutputFile() in libgtest.a(gtest-all.o)
+      testing::internal::UnitTestOptions::FilterMatchesTest(std::string const&, std::string const&) in libgtest.a(gtest-all.o)
+      testing::internal::HasOneFailure(char const*, char const*, char const*, testing::TestPartResultArray const&, testing::TestPartResult::Type, std::string const&) in libgtest.a(gtest-all.o)
+      testing::internal::String::ShowWideCString(wchar_t const*) in libgtest.a(gtest-all.o)
+      ...
+  "std::allocator<wchar_t>::allocator()", referenced from:
+      testing::internal::UniversalTersePrinter<wchar_t const*>::Print(wchar_t const*, std::ostream*) in libgtest.a(gtest-all.o)
+  "std::allocator<wchar_t>::~allocator()", referenced from:
+      testing::internal::UniversalTersePrinter<wchar_t const*>::Print(wchar_t const*, std::ostream*) in libgtest.a(gtest-all.o)
+  "std::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> >::basic_string(wchar_t const*, std::allocator<wchar_t> const&)", referenced from:
+      testing::internal::UniversalTersePrinter<wchar_t const*>::Print(wchar_t const*, std::ostream*) in libgtest.a(gtest-all.o)
+  "std::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> >::~basic_string()", referenced from:
+      testing::internal::UniversalTersePrinter<wchar_t const*>::Print(wchar_t const*, std::ostream*) in libgtest.a(gtest-all.o)
+  "std::ostream::write(char const*, long)", referenced from:
+      testing::internal::XmlUnitTestResultPrinter::OutputXmlCDataSection(std::ostream*, char const*) in libgtest.a(gtest-all.o)
+  "std::ostream::operator<<(std::ostream& (*)(std::ostream&))", referenced from:
+      testing::internal::GTestLog::GTestLog(testing::internal::GTestLogSeverity, char const*, int) in libgtest.a(gtest-all.o)
+      testing::internal::GTestLog::~GTestLog() in libgtest.a(gtest-all.o)
+      testing::operator<<(std::ostream&, testing::TestPartResult const&) in libgtest.a(gtest-all.o)
+  "std::ostream::operator<<(std::ios_base& (*)(std::ios_base&))", referenced from:
+      testing::internal::String::FormatHexInt(int) in libgtest.a(gtest-all.o)
+      testing::internal::String::FormatByte(unsigned char) in libgtest.a(gtest-all.o)
+  "std::ostream::operator<<(void const*)", referenced from:
+      testing::internal::PrintTo(char const*, std::ostream*) in libgtest.a(gtest-all.o)
+      testing::internal::PrintTo(wchar_t const*, std::ostream*) in libgtest.a(gtest-all.o)
+  "std::ostream::operator<<(double)", referenced from:
+      testing::internal::FormatTimeInMillisAsSeconds(long long) in libgtest.a(gtest-all.o)
+      testing::AssertionResult testing::internal::FloatingPointLE<double>(char const*, char const*, double, double) in libgtest.a(gtest-all.o)
+      testing::Message& testing::Message::operator<<<double>(double const&) in libgtest.a(gtest-all.o)
+  "std::ostream::operator<<(float)", referenced from:
+      testing::AssertionResult testing::internal::FloatingPointLE<float>(char const*, char const*, float, float) in libgtest.a(gtest-all.o)
+  "std::ostream::operator<<(int)", referenced from:
+      testing::internal::String::FormatHexInt(int) in libgtest.a(gtest-all.o)
+      testing::internal::String::FormatIntWidth2(int) in libgtest.a(gtest-all.o)
+      testing::internal::FailFromInternalError(int) in libgtest.a(gtest-all.o)
+      testing::operator<<(std::ostream&, testing::TestPartResult const&) in libgtest.a(gtest-all.o)
+      testing::Message& testing::Message::operator<<<int>(int const&) in libgtest.a(gtest-all.o)
+      testing::internal::GetNextRandomSeed(int) in libgtest.a(gtest-all.o)
+      void testing::internal::ShuffleRange<int>(testing::internal::Random*, int, int, std::vector<int, std::allocator<int> >*) in libgtest.a(gtest-all.o)
+      ...
+  "std::ostream::operator<<(unsigned int)", referenced from:
+      testing::internal::Random::Generate(unsigned int) in libgtest.a(gtest-all.o)
+      testing::internal::String::FormatByte(unsigned char) in libgtest.a(gtest-all.o)
+      testing::internal::DeathTestImpl::ReadAndInterpretStatusByte() in libgtest.a(gtest-all.o)
+  "std::ostream::operator<<(unsigned long)", referenced from:
+      testing::(anonymous namespace)::PrintBytesInObjectToImpl(unsigned char const*, unsigned long, std::ostream*) in libgtest.a(gtest-all.o)
+      testing::Message& testing::Message::operator<<<unsigned long>(unsigned long const&) in libgtest.a(gtest-all.o)
+  "std::ostream::operator<<(long long)", referenced from:
+      testing::Message& testing::Message::operator<<<long long>(long long const&) in libgtest.a(gtest-all.o)
+      void testing_internal::DefaultPrintNonContainerTo<long long>(long long const&, std::ostream*) in libgtest.a(gtest-all.o)
+  "std::string::_Alloc_hider::_Alloc_hider(char*, std::allocator<char> const&)", referenced from:
+      std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string<char const*>(char const*, char const*, std::allocator<char> const&) in libgtest.a(gtest-all.o)
+  "std::string::_S_empty_rep()", referenced from:
+      char* std::string::_S_construct<char const*>(char const*, char const*, std::allocator<char> const&, std::forward_iterator_tag) in libgtest.a(gtest-all.o)
+  "std::string::_S_copy_chars(char*, char const*, char const*)", referenced from:
+      char* std::string::_S_construct<char const*>(char const*, char const*, std::allocator<char> const&, std::forward_iterator_tag) in libgtest.a(gtest-all.o)
+  "std::string::_Rep::_M_destroy(std::allocator<char> const&)", referenced from:
+      char* std::string::_S_construct<char const*>(char const*, char const*, std::allocator<char> const&, std::forward_iterator_tag) in libgtest.a(gtest-all.o)
+  "std::string::_Rep::_M_refdata()", referenced from:
+      char* std::string::_S_construct<char const*>(char const*, char const*, std::allocator<char> const&, std::forward_iterator_tag) in libgtest.a(gtest-all.o)
+  "std::string::_Rep::_M_set_length_and_sharable(unsigned long)", referenced from:
+      char* std::string::_S_construct<char const*>(char const*, char const*, std::allocator<char> const&, std::forward_iterator_tag) in libgtest.a(gtest-all.o)
+  "std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&)", referenced from:
+      char* std::string::_S_construct<char const*>(char const*, char const*, std::allocator<char> const&, std::forward_iterator_tag) in libgtest.a(gtest-all.o)
+  "std::string::append(char const*)", referenced from:
+      std::basic_string<char, std::char_traits<char>, std::allocator<char> > std::operator+<char, std::char_traits<char>, std::allocator<char> >(std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, char const*) in libgtest.a(gtest-all.o)
+      testing::AssertionResult::AppendMessage(testing::Message const&) in libgtest.a(gtest-all.o)
+  "std::string::append(char const*, unsigned long)", referenced from:
+      std::basic_string<char, std::char_traits<char>, std::allocator<char> > std::operator+<char, std::char_traits<char>, std::allocator<char> >(char const*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) in libgtest.a(gtest-all.o)
+  "std::string::append(std::string const&)", referenced from:
+      std::basic_string<char, std::char_traits<char>, std::allocator<char> > std::operator+<char, std::char_traits<char>, std::allocator<char> >(char const*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) in libgtest.a(gtest-all.o)
+      std::basic_string<char, std::char_traits<char>, std::allocator<char> > std::operator+<char, std::char_traits<char>, std::allocator<char> >(std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) in libgtest.a(gtest-all.o)
+  "std::string::append(unsigned long, char)", referenced from:
+      std::basic_string<char, std::char_traits<char>, std::allocator<char> > std::operator+<char, std::char_traits<char>, std::allocator<char> >(std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, char) in libgtest.a(gtest-all.o)
+  "std::string::reserve(unsigned long)", referenced from:
+      testing::internal::StringStreamToString(std::basic_stringstream<char, std::char_traits<char>, std::allocator<char> >*) in libgtest.a(gtest-all.o)
+      testing::internal::XmlUnitTestResultPrinter::RemoveInvalidXmlCharacters(std::string const&) in libgtest.a(gtest-all.o)
+      std::basic_string<char, std::char_traits<char>, std::allocator<char> > std::operator+<char, std::char_traits<char>, std::allocator<char> >(char const*, std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) in libgtest.a(gtest-all.o)
+  "std::string::push_back(char)", referenced from:
+      testing::internal::XmlUnitTestResultPrinter::RemoveInvalidXmlCharacters(std::string const&) in libgtest.a(gtest-all.o)
+  "std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&)", referenced from:
+      testing::internal::UnitTestImpl::CurrentOsStackTraceExceptTop(int) in libgtest.a(gtest-all.o)
+      testing::internal::FilePath::RemoveDirectoryName() const in libgtest.a(gtest-all.o)
+      testing::internal::UnitTestOptions::GetOutputFormat() in libgtest.a(gtest-all.o)
+      testing::internal::UnitTestOptions::GetAbsolutePathToOutputFile() in libgtest.a(gtest-all.o)
+      testing::internal::UnitTestOptions::FilterMatchesTest(std::string const&, std::string const&) in libgtest.a(gtest-all.o)
+      testing::internal::HasOneFailure(char const*, char const*, char const*, testing::TestPartResultArray const&, testing::TestPartResult::Type, std::string const&) in libgtest.a(gtest-all.o)
+      testing::internal::String::ShowWideCString(wchar_t const*) in libgtest.a(gtest-all.o)
+      ...
+  "std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, unsigned long, std::allocator<char> const&)", referenced from:
+      testing::internal::UnitTestOptions::GetOutputFormat() in libgtest.a(gtest-all.o)
+      testing::internal::FilePath::RemoveFileName() const in libgtest.a(gtest-all.o)
+      testing::internal::CapturedStream::ReadEntireFile(__sFILE*) in libgtest.a(gtest-all.o)
+  "std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(std::string const&)", referenced from:
+      testing::internal::AppendUserMessage(std::string const&, testing::Message const&) in libgtest.a(gtest-all.o)
+      testing::internal::UnitTestOptions::GetAbsolutePathToOutputFile() in libgtest.a(gtest-all.o)
+      testing::internal::SingleFailureChecker::SingleFailureChecker(testing::TestPartResultArray const*, testing::TestPartResult::Type, std::string const&) in libgtest.a(gtest-all.o)
+      testing::AssertionResult::AssertionResult(testing::AssertionResult const&) in libgtest.a(gtest-all.o)
+      testing::TestInfo::TestInfo(std::string const&, std::string const&, char const*, char const*, void const*, testing::internal::TestFactoryBase*) in libgtest.a(gtest-all.o)
+      testing::internal::FormatCompilerIndependentFileLocation(char const*, int) in libgtest.a(gtest-all.o)
+      std::basic_string<char, std::char_traits<char>, std::allocator<char> > std::operator+<char, std::char_traits<char>, std::allocator<char> >(std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, char const*) in libgtest.a(gtest-all.o)
+      ...
+  "std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string()", referenced from:
+      testing::internal::UnitTestOptions::FilterMatchesTest(std::string const&, std::string const&) in libgtest.a(gtest-all.o)
+      testing::internal::StringStreamToString(std::basic_stringstream<char, std::char_traits<char>, std::allocator<char> >*) in libgtest.a(gtest-all.o)
+      testing::internal::FilePath::RemoveFileName() const in libgtest.a(gtest-all.o)
+      testing::internal::XmlUnitTestResultPrinter::RemoveInvalidXmlCharacters(std::string const&) in libgtest.a(gtest-all.o)
+      testing::internal::UnitTestImpl::RecordProperty(testing::TestProperty const&) in libgtest.a(gtest-all.o)
+      testing::internal::FormatDeathTestOutput(std::string const&) in libgtest.a(gtest-all.o)
+      testing::internal::FilePath::MakeFileName(testing::internal::FilePath const&, testing::internal::FilePath const&, int, char const*) in libgtest.a(gtest-all.o)
+      ...
+  "std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()", referenced from:
+      testing::internal::BoolFromGTestEnv(char const*, bool) in libgtest.a(gtest-all.o)
+      testing::internal::StringFromGTestEnv(char const*, char const*) in libgtest.a(gtest-all.o)
+      testing::internal::Int32FromGTestEnv(char const*, int) in libgtest.a(gtest-all.o)
+      testing::internal::AssertHelper::operator=(testing::Message const&) const in libgtest.a(gtest-all.o)
+      testing::UnitTest::AddTestPartResult(testing::TestPartResult::Type, char const*, int, std::string const&, std::string const&) in libgtest.a(gtest-all.o)
+      testing::internal::AppendUserMessage(std::string const&, testing::Message const&) in libgtest.a(gtest-all.o)
+      testing::internal::FilePath::RemoveDirectoryName() const in libgtest.a(gtest-all.o)
+      ...
+  "std::string::operator=(char const*)", referenced from:
+      testing::internal::UnitTestOptions::FilterMatchesTest(std::string const&, std::string const&) in libgtest.a(gtest-all.o)
+      testing::internal::FilePath::RemoveFileName() const in libgtest.a(gtest-all.o)
+      testing::internal::UnitTestImpl::RecordProperty(testing::TestProperty const&) in libgtest.a(gtest-all.o)
+      testing::internal::ParseStringFlag(char const*, char const*, std::string*) in libgtest.a(gtest-all.o)
+      testing::internal::FilePath::Normalize() in libgtest.a(gtest-all.o)
+      testing::internal::CapturedStream::CapturedStream(int) in libgtest.a(gtest-all.o)
+  "std::string::operator=(std::string const&)", referenced from:
+      testing::internal::UnitTestOptions::FilterMatchesTest(std::string const&, std::string const&) in libgtest.a(gtest-all.o)
+      testing::internal::FilePath::RemoveFileName() const in libgtest.a(gtest-all.o)
+      testing::internal::ScopedTrace::ScopedTrace(char const*, int, testing::Message const&) in libgtest.a(gtest-all.o)
+      testing::internal::DeathTest::set_last_death_test_message(std::string const&) in libgtest.a(gtest-all.o)
+      testing::internal::FilePath::MakeFileName(testing::internal::FilePath const&, testing::internal::FilePath const&, int, char const*) in libgtest.a(gtest-all.o)
+      testing::internal::FilePath::Set(testing::internal::FilePath const&) in libgtest.a(gtest-all.o)
+      testing::TestProperty::SetValue(std::string const&) in libgtest.a(gtest-all.o)
+      ...
+  "std::string::operator+=(char const*)", referenced from:
+      testing::internal::StringStreamToString(std::basic_stringstream<char, std::char_traits<char>, std::allocator<char> >*) in libgtest.a(gtest-all.o)
+      testing::internal::FormatDeathTestOutput(std::string const&) in libgtest.a(gtest-all.o)
+  "std::string::operator+=(std::string const&)", referenced from:
+      testing::internal::FormatDeathTestOutput(std::string const&) in libgtest.a(gtest-all.o)
+  "std::string::operator+=(char)", referenced from:
+      testing::internal::StringStreamToString(std::basic_stringstream<char, std::char_traits<char>, std::allocator<char> >*) in libgtest.a(gtest-all.o)
+  "std::runtime_error::runtime_error(std::string const&)", referenced from:
+      testing::internal::GoogleTestFailureException::GoogleTestFailureException(testing::TestPartResult const&) in libgtest.a(gtest-all.o)
+  "std::basic_stringstream<char, std::char_traits<char>, std::allocator<char> >::basic_stringstream(std::_Ios_Openmode)", referenced from:
+      testing::Message::Message() in libgtest.a(gtest-all.o)
+      testing::internal::String::FormatHexInt(int) in libgtest.a(gtest-all.o)
+      testing::internal::WideStringToUtf8(wchar_t const*, int) in libgtest.a(gtest-all.o)
+      testing::internal::String::FormatIntWidth2(int) in libgtest.a(gtest-all.o)
+      testing::internal::String::FormatByte(unsigned char) in libgtest.a(gtest-all.o)
+      testing::internal::XmlUnitTestResultPrinter::OnTestIterationEnd(testing::UnitTest const&, int) in libgtest.a(gtest-all.o)
+      testing::internal::FormatTimeInMillisAsSeconds(long long) in libgtest.a(gtest-all.o)
+      ...
+  "std::basic_stringstream<char, std::char_traits<char>, std::allocator<char> >::~basic_stringstream()", referenced from:
+      testing::internal::String::FormatHexInt(int) in libgtest.a(gtest-all.o)
+      testing::internal::WideStringToUtf8(wchar_t const*, int) in libgtest.a(gtest-all.o)
+      testing::internal::String::FormatIntWidth2(int) in libgtest.a(gtest-all.o)
+      testing::internal::String::FormatByte(unsigned char) in libgtest.a(gtest-all.o)
+      testing::internal::XmlUnitTestResultPrinter::OnTestIterationEnd(testing::UnitTest const&, int) in libgtest.a(gtest-all.o)
+      testing::internal::FormatTimeInMillisAsSeconds(long long) in libgtest.a(gtest-all.o)
+      testing::AssertionResult testing::internal::FloatingPointLE<float>(char const*, char const*, float, float) in libgtest.a(gtest-all.o)
+      ...
+  "std::ios_base::Init::Init()", referenced from:
+      ___cxx_global_var_init in libgtest.a(gtest-all.o)
+  "std::ios_base::Init::~Init()", referenced from:
+      ___cxx_global_var_init in libgtest.a(gtest-all.o)
+  "std::_Rb_tree_decrement(std::_Rb_tree_node_base*)", referenced from:
+      std::_Rb_tree_iterator<std::string>::operator--() in libgtest.a(gtest-all.o)
+  "std::_Rb_tree_increment(std::_Rb_tree_node_base const*)", referenced from:
+      std::_Rb_tree_const_iterator<char const*>::operator++() in libgtest.a(gtest-all.o)
+  "std::__throw_logic_error(char const*)", referenced from:
+      char* std::string::_S_construct<char const*>(char const*, char const*, std::allocator<char> const&, std::forward_iterator_tag) in libgtest.a(gtest-all.o)
+  "std::__throw_length_error(char const*)", referenced from:
+      std::vector<char*, std::allocator<char*> >::_M_insert_aux(__gnu_cxx::__normal_iterator<char**, std::vector<char*, std::allocator<char*> > >, char* const&) in libgtest.a(gtest-all.o)
+      std::vector<std::string, std::allocator<std::string> >::_M_insert_aux(__gnu_cxx::__normal_iterator<std::string*, std::vector<std::string, std::allocator<std::string> > >, std::string const&) in libgtest.a(gtest-all.o)
+      std::vector<testing::TestCase*, std::allocator<testing::TestCase*> >::_M_insert_aux(__gnu_cxx::__normal_iterator<testing::TestCase**, std::vector<testing::TestCase*, std::allocator<testing::TestCase*> > >, testing::TestCase* const&) in libgtest.a(gtest-all.o)
+      std::vector<testing::internal::TraceInfo, std::allocator<testing::internal::TraceInfo> >::_M_insert_aux(__gnu_cxx::__normal_iterator<testing::internal::TraceInfo*, std::vector<testing::internal::TraceInfo, std::allocator<testing::internal::TraceInfo> > >, testing::internal::TraceInfo const&) in libgtest.a(gtest-all.o)
+      std::vector<testing::Environment*, std::allocator<testing::Environment*> >::_M_insert_aux(__gnu_cxx::__normal_iterator<testing::Environment**, std::vector<testing::Environment*, std::allocator<testing::Environment*> > >, testing::Environment* const&) in libgtest.a(gtest-all.o)
+      std::vector<testing::TestEventListener*, std::allocator<testing::TestEventListener*> >::_M_insert_aux(__gnu_cxx::__normal_iterator<testing::TestEventListener**, std::vector<testing::TestEventListener*, std::allocator<testing::TestEventListener*> > >, testing::TestEventListener* const&) in libgtest.a(gtest-all.o)
+      std::vector<int, std::allocator<int> >::_M_insert_aux(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, int const&) in libgtest.a(gtest-all.o)
+      ...
+  "std::__throw_out_of_range(char const*)", referenced from:
+      std::vector<testing::TestProperty, std::allocator<testing::TestProperty> >::_M_range_check(unsigned long) const in libgtest.a(gtest-all.o)
+      std::vector<testing::TestPartResult, std::allocator<testing::TestPartResult> >::_M_range_check(unsigned long) const in libgtest.a(gtest-all.o)
+  "std::_Rb_tree_insert_and_rebalance(bool, std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, std::_Rb_tree_node_base&)", referenced from:
+      std::_Rb_tree<std::string, std::string, std::_Identity<std::string>, std::less<std::string>, std::allocator<std::string> >::_M_insert(std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, std::string const&) in libgtest.a(gtest-all.o)
+  "std::cerr", referenced from:
+      testing::internal::GTestLog::GetStream() in libgtest.a(gtest-all.o)
+  "std::basic_ostream<char, std::char_traits<char> >& std::endl<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&)", referenced from:
+      testing::internal::GTestLog::GTestLog(testing::internal::GTestLogSeverity, char const*, int) in libgtest.a(gtest-all.o)
+      testing::internal::GTestLog::~GTestLog() in libgtest.a(gtest-all.o)
+      testing::operator<<(std::ostream&, testing::TestPartResult const&) in libgtest.a(gtest-all.o)
+  "std::basic_ostream<char, std::char_traits<char> >& std::operator<<<std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)", referenced from:
+      testing::internal::Random::Generate(unsigned int) in libgtest.a(gtest-all.o)
+      testing::GetReservedAttributesForElement(std::string const&) in libgtest.a(gtest-all.o)
+      testing::internal::XmlUnitTestResultPrinter::PrintXmlUnitTest(std::ostream*, testing::UnitTest const&) in libgtest.a(gtest-all.o)
+      testing::internal::XmlUnitTestResultPrinter::OutputXmlCDataSection(std::ostream*, char const*) in libgtest.a(gtest-all.o)
+      testing::internal::XmlUnitTestResultPrinter::OutputXmlAttribute(std::ostream*, std::string const&, std::string const&, std::string const&) in libgtest.a(gtest-all.o)
+      testing::internal::XmlUnitTestResultPrinter::OutputXmlTestInfo(std::ostream*, char const*, testing::TestInfo const&) in libgtest.a(gtest-all.o)
+      testing::internal::XmlUnitTestResultPrinter::PrintXmlTestCase(std::ostream*, testing::TestCase const&) in libgtest.a(gtest-all.o)
+      ...
+  "std::basic_ostream<char, std::char_traits<char> >& std::operator<<<std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char)", referenced from:
+      testing::internal::CharFormat testing::internal::PrintAsCharLiteralTo<wchar_t, wchar_t>(wchar_t, std::ostream*) in libgtest.a(gtest-all.o)
+      testing::internal::CharFormat testing::internal::PrintAsCharLiteralTo<unsigned char, signed char>(signed char, std::ostream*) in libgtest.a(gtest-all.o)
+      testing::internal::CharFormat testing::internal::PrintAsCharLiteralTo<unsigned char, unsigned char>(unsigned char, std::ostream*) in libgtest.a(gtest-all.o)
+      testing::(anonymous namespace)::PrintByteSegmentInObjectTo(unsigned char const*, unsigned long, unsigned long, std::ostream*) in libgtest.a(gtest-all.o)
+      testing::Message& testing::Message::operator<<<char>(char const&) in libgtest.a(gtest-all.o)
+  "std::basic_ostream<char, std::char_traits<char> >& std::operator<<<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, std::_Setprecision)", referenced from:
+      testing::Message::Message() in libgtest.a(gtest-all.o)
+      testing::AssertionResult testing::internal::FloatingPointLE<float>(char const*, char const*, float, float) in libgtest.a(gtest-all.o)
+      testing::AssertionResult testing::internal::FloatingPointLE<double>(char const*, char const*, double, double) in libgtest.a(gtest-all.o)
+  "std::basic_ostream<char, std::char_traits<char> >& std::operator<<<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, std::_Setw)", referenced from:
+      testing::internal::String::FormatIntWidth2(int) in libgtest.a(gtest-all.o)
+      testing::internal::String::FormatByte(unsigned char) in libgtest.a(gtest-all.o)
+  "std::basic_ostream<char, std::char_traits<char> >& std::operator<<<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, std::_Setfill<char>)", referenced from:
+      testing::internal::String::FormatIntWidth2(int) in libgtest.a(gtest-all.o)
+      testing::internal::String::FormatByte(unsigned char) in libgtest.a(gtest-all.o)
+  "std::basic_ostream<char, std::char_traits<char> >& std::operator<<<char, std::char_traits<char>, std::allocator<char> >(std::basic_ostream<char, std::char_traits<char> >&, std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)", referenced from:
+      testing::internal::WideStringToUtf8(wchar_t const*, int) in libgtest.a(gtest-all.o)
+      testing::GetReservedAttributesForElement(std::string const&) in libgtest.a(gtest-all.o)
+      testing::internal::XmlUnitTestResultPrinter::PrintXmlUnitTest(std::ostream*, testing::UnitTest const&) in libgtest.a(gtest-all.o)
+      testing::internal::XmlUnitTestResultPrinter::OutputXmlAttribute(std::ostream*, std::string const&, std::string const&, std::string const&) in libgtest.a(gtest-all.o)
+      testing::internal::XmlUnitTestResultPrinter::OutputXmlTestInfo(std::ostream*, char const*, testing::TestInfo const&) in libgtest.a(gtest-all.o)
+      testing::internal::XmlUnitTestResultPrinter::PrintXmlTestCase(std::ostream*, testing::TestCase const&) in libgtest.a(gtest-all.o)
+      testing::internal::DeathTestImpl::ReadAndInterpretStatusByte() in libgtest.a(gtest-all.o)
+      ...
+ld: symbol(s) not found for architecture x86_64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make: *** [test] Error 1
